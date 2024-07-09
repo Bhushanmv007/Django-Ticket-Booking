@@ -1,0 +1,9 @@
+{% extends "booking/base.html" %}
+
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ event.name }}</h1>
+<p>Date: {{ event.date }}</p>
+<p>Location: {{ event.location }}</p>
+{% endblock %}

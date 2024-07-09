@@ -1,0 +1,16 @@
+{% extends "booking/base.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block introduction %}
+<p>Check out the latest events and book your tickets now!</p>
+{% endblock %}
+
+{% block content %}
+<h1>Upcoming Events</h1>
+<ul>
+    {% for event in events %}
+        <li><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
