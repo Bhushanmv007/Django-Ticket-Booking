@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Ticket Booking{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'booking/styles.css' %}">
@@ -8,6 +10,12 @@
 <body>
     <header>
         <h1>Ticket Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="introduction">
@@ -17,6 +25,8 @@
         </section>
         {% block content %}{% endblock %}
     </main>
-    <footer>Developed by Apoorva Viresh D-1JT21CS017</footer>
+    <footer>
+        Developed by Bhushan M V (1JT21CS030)
+    </footer>
 </body>
 </html>
